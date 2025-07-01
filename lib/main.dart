@@ -26,6 +26,33 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text("Hello World")));
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            Image.asset("assets/logo.png"),
+            Image.asset("assets/splash.png"),
+            Text(
+              "O lugar ideal para buscar, salvar e organizar seus filmes favoritos!",
+            ),
+            InkWell(
+              onTap: () {},
+              child: Ink(
+                decoration: BoxDecoration(
+                  color: Color(0xFFB370FF),
+                  borderRadius: BorderRadius.circular(50)
+                ),
+                child: Row(
+                  children: <Widget>[
+                    Text("Quero Começar")
+                  ]
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
