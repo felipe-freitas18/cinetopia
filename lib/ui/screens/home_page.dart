@@ -8,16 +8,19 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            Image.asset("assets/logo.png"),
-            Image.asset("assets/splash.png"),
-            Text(
-              "O lugar ideal para buscar, salvar e organizar seus filmes favoritos!",
-            ),
-            PrimaryButton(),
-          ],
+        padding: const EdgeInsets.symmetric(horizontal: 26),
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Image.asset("assets/logo.png"),
+              Image.asset("assets/splash.png"),
+              Text(
+                "O lugar ideal para buscar, salvar e organizar seus filmes favoritos!",
+              ),
+              PrimaryButton(),
+            ],
+          ),
         ),
       ),
     );
