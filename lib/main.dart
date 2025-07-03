@@ -45,7 +45,8 @@ class HomePage extends StatelessWidget {
                 ),
                 child: Row(
                   children: <Widget>[
-                    Text("Quero Começar")
+                    Text("Quero Começar"),
+                    Icon(Icons.arrow_forward)
                   ]
                 ),
               ),
