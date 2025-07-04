@@ -14,7 +14,7 @@ class MovieCard extends StatelessWidget {
             color: Color(0xFF000000),
             borderRadius: BorderRadius.circular(8)
           ),
-          margin: EdgeInsets.only(right: 16),
+          margin: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
         ),
         Column(
           mainAxisSize: MainAxisSize.min,
