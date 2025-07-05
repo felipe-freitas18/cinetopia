@@ -23,7 +23,7 @@ class _DashboardState extends State<Dashboard> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(16, 54, 16, 0),
+        padding: const EdgeInsets.fromLTRB(0, 54, 0, 0),
         child: _screens.elementAt(_currentIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
