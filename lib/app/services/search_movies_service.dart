@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:cinetopia/app/models/movie.dart';
 import 'package:cinetopia/app/services/api_key.dart';
 import 'package:http/http.dart' as http;
@@ -18,7 +20,10 @@ class SearchMoviesService {
       );
 
       if (response.statusCode == 200) {
-        print(response.body);
+        for (dynamic movie in json.decode(response.body)["results"]) {
+          movies.add(Movie.fromMap(movie));
+        }
+
       } else {
         throw Exception(response.body);
       }

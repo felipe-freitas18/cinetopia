@@ -45,8 +45,8 @@ class Movie {
     return Movie(
       id: map['id'] as int,
       title: map['title'] as String,
-      imageUrl: map['imageUrl'] as String,
-      releaseDate: map['releaseDate'] as String,
+      imageUrl: map['poster_path'] as String,
+      releaseDate: map['release_date'] as String,
       overview: map['overview'] as String,
     );
   }
