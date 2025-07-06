@@ -17,7 +17,7 @@ class MovieCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
             image: DecorationImage(image: NetworkImage(movie.getPosterImage()), fit: BoxFit.cover)
           ),
-          margin: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+          margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
         ),
         Column(
           mainAxisSize: MainAxisSize.min,
