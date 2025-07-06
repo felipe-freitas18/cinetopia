@@ -43,8 +43,9 @@ class SearchForMovie implements SearchMoviesService {
   @override
   Future<List<Movie>> getMovies() async {
     try {
+      String url = moviePrefixUrl + query + movieFilterSufix;
       final response = await http.get(
-        Uri.parse(moviePrefixUrl + query + movieFilterSufix),
+        Uri.parse(url),
         headers: requestHeader,
       );
 
