@@ -1,9 +1,9 @@
 import 'package:cinetopia/app/viewmodels/search_movies_viewmodel.dart';
 import 'package:cinetopia/ui/components/movie_card.dart';
+import 'package:cinetopia/ui/screens/details.dart';
 import 'package:flutter/material.dart';
 
 class SearchMovies extends StatefulWidget {
-
   SearchMovies({super.key});
 
   @override
@@ -65,7 +65,16 @@ class _SearchMoviesState extends State<SearchMovies> {
                   ),
                 ),
                 SliverList.builder(
-                  itemBuilder: (context, index) => MovieCard(movie: viewModel.moviesList[index]),
+                  itemBuilder: (context, index) => IconButton(
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            Details(movie: viewModel.moviesList[index]),
+                      ),
+                    ),
+                    icon: MovieCard(movie: viewModel.moviesList[index]),
+                  ),
                   itemCount: viewModel.moviesList.length,
                 ),
               ],
